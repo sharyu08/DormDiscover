@@ -1,0 +1,162 @@
+/* Reset default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(to left, #2b4f4e, #314a6f, #442965);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+@keyframes randomMotion {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 75% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Pricing Section */
+.pricing-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: radial-gradient( circle at bottom  , #00ffaf, #7f7fd5, #2e3192);/* Initial Gradient */
+    background-size: 250% 250%; /* Double the background size for smooth animation */
+    animation: randomMotion 7s linear infinite; /* Animation effect */
+    width: 100%;
+    height: 630px;
+    
+}
+
+.pricing-section h1 {
+    color: #51005d;
+    margin-bottom: 40px;
+    font-size:40px;
+}
+
+.pricing-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.pricing-card {
+    background-color: #eef2f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    width: 300px;
+    height: 400px;
+    max-width: 100%;
+    text-align: center;
+    border-left: 5px solid #4a69bd; /* Accent color */
+    transition: transform 0.3s;
+}
+.pricing-card h2 {
+    font-size: 28px;  /* Increase font size for the title */
+}
+
+.price {
+    font-size: 32px;  /* Increase price size */
+}
+
+.pricing-card:hover {
+    transform: scale(1.05);
+}
+
+.pricing-card h2 {
+    color: #375a7f;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 28px;
+    color: #0e5579;
+    margin: 20px 0;
+}
+
+.pricing-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    color: #333333;
+}
+
+.pricing-card li {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.signup-btn {
+    padding: 10px 20px;
+    background-color: #4a69bd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signup-btn:hover {
+    background-color: #375a7f;
+}
+
+
+.announcement-bar {
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    overflow-x: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+
+
+.announcement-bar {
+    animation: marquee 15s linear infinite;
+}
+.next-button {
+    position: fixed;      /* Fixes the button to the viewport */
+    top: 50%;             /* Vertically centers the button */
+    right: 20px;          /* Positions the button on the right side */
+    transform: translateY(-50%);  /* Centers the button vertically */
+    padding: 10px 20px;
+    background-color: #3ab5b0; /* Customize color as needed */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.next-button:hover {
+    background-color: #3d99be; /* Changes color on hover */
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

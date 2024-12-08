@@ -1,0 +1,139 @@
+/* Basic reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+/* Header Styling */
+.header-bar {
+    background-color: #0e5579; /* Same color as footer */
+    color: #fff;
+    padding: 15px; /* Adjust for desired size */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* .logo { 
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}*/
+
+.header-title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Main Content Styling */
+.main-content {
+    padding: 40px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #0e5579; /* Footer background color */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    margin-top:40px;
+}
+/* Basic reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Make the container full height */
+html, body {
+    height: 100%;
+}
+
+/* Main container styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh; /* Make container full height */
+    margin-bottom: 40px;
+    background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+    
+}
+
+/* Contact section styles */
+.contact-section {
+    flex: 1; /* Allows the content area to take up remaining space */
+    background-color: #f9f9f9;
+    padding: 40px;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+.contact-header h1 {
+    font-size: 32px;
+    color: #0e5579;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-header p {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+.contact-form label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    background-color: #0e5579;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #09405e;
+}

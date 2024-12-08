@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - DormDiscover</title>
+    <link rel="stylesheet" href="styleblog.css">
+</head>
+<body>
+    <main class="blog-page">
+        <h1>Your Guide to Better Student Living Starts Here!</h1>
+        
+        <section class="blog-posts">
+            <article class="post">
+                <h2>How to Find the Perfect Student Accommodation</h2>
+                <p>Finding the perfect student housing can be challenging. Here are some tips to make the process easier and ensure you find a place that feels like home...</p>
+                <div class="read-more-content">
+                    <p>Start by setting a budget and knowing what amenities you need, such as WiFi, a kitchen, or study areas. Visit properties in person if possible, or schedule virtual tours to get a feel for the space. It's also helpful to speak with current residents and ask about their experience with the landlord and the building's safety. Happy hunting!</p>
+                </div>
+                <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+            </article>
+
+            <article class="post">
+                <h2>Top 5 Things to Consider Before Signing a Lease</h2>
+                <p>Leasing a place is a big commitment. Make sure to check these essential factors before you sign on the dotted line...</p>
+                <div class="read-more-content">
+                    <p>Always review the terms and conditions, including rent increases, utilities included, and maintenance policies. Confirm the landlord’s repair responsibilities, parking options, and any penalties for breaking the lease. It's smart to get everything in writing and ask for clarification if anything is unclear.</p>
+                </div>
+                <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+            </article>
+
+            <article class="post">
+                <h2>Budget-Friendly Tips for Decorating Your Dorm Room</h2>
+                <p>Looking to make your dorm room feel cozy and personal without breaking the bank? Here are some budget-friendly decor ideas...</p>
+                <div class="read-more-content">
+                    <p>Use removable wall decals for a splash of color, add string lights for warmth, and consider second-hand furniture for affordable finds. Use storage cubes or organizers for a clutter-free space, and decorate with small, personal items like photos, plants, or tapestries to make it feel like home.</p>
+                </div>
+                <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+            </article>
+        </section>
+
+       
+    </main>
+
+    <script>
+        function toggleContent(button) {
+            const content = button.previousElementSibling; // Select the content div
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            button.textContent = content.style.display === 'block' ? 'Read Less' : 'Read More';
+        }
+    </script>
+    <button class="next-button" onclick="window.location.href='contact2.html'">Next</button>
+
+</body>
+</html>

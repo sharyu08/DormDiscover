@@ -1,0 +1,124 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+/* Outer Container */
+.outer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Adds space between rows and columns */
+    max-width: 1200px;
+}
+
+/* Individual Box */
+.container {
+    width: 48%; /* Each box takes up almost half the width */
+    max-width: 48%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px; /* Adds space below each row */
+}
+
+/* Left Image Section */
+.image-container {
+    width: 100%;
+    height: 200px; /* Set a fixed height for the image */
+    background-image: url('path/to/room-photo.jpg'); /* Replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* Right Info Section */
+.info-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-header h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.info-header p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.location img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+/* Dropdowns */
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.options select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 48%; /* Each dropdown takes half of the row */
+}
+
+/* Pricing and Submit Button */
+.pricing-submit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0e5579;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #0e5579;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #09405e;
+}

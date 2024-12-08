@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="stylesign.css"> <!-- Link to your existing CSS file -->
+    
+</head>
+<body>
+    
+    <!-- Sign Up Form Section -->
+    <div class="signup-page">
+        <div class="signup-form-container">
+            <h1>Level Up Your Experience – Sign Up Now!</h1>
+            <form class="signup-form" id="signup-form">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirmpassword">Confirm Password</label>
+                <input type="password" id="confirmpassword" name="confirmpassword" required>
+
+                <button type="submit" class="sign-up-button">Sign Up</button>
+            </form>
+
+            <p class="login-link">Already have an account? <a href="login.html">Log in here</a>.</p>
+        </div>
+    </div>
+
+    <!-- Success Popup Modal -->
+    <div id="successPopup" style="display:none;">
+        <p>User registered successfully!</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+
+            // Gather form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            try {
+                const response = await fetch('/auth/signup', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ name, email, password, confirmPassword }),
+                });
+
+                const result = await response.json();
+                
+                if (response.ok) {
+                    // Show success popup if signup is successful
+                    document.getElementById('successPopup').style.display = 'block';
+                } else {
+                    alert(result.message); // Show error message from server
+                }
+            } catch (error) {
+                alert('An error occurred. Please try again.');
+            }
+        });
+
+        // Function to close the popup
+        function closePopup() {
+            document.getElementById('successPopup').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>

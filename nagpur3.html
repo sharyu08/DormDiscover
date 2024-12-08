@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Layout with Dropdowns and Button</title>
+  <style>
+    /* Basic Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Main Container */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    /* Card Style */
+    .card {
+      width: calc(33.33% - 20px); /* Three cards per line with spacing */
+      background-color: #f8f8f8;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      padding: 15px;
+      position: relative; /* Needed for the absolute positioning of the button */
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    /* Button Style */
+    .more-images-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 10px 15px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .more-images-button:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .card h2 {
+      font-size: 1.5em;
+      color: #333;
+      margin: 15px 0;
+    }
+
+    .card p {
+      font-size: 1em;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    /* Dropdown and Button Container */
+    .form-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    /* Dropdown Style */
+    .dropdown {
+      padding: 8px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 48%; /* Adjust to make two dropdowns fit per line */
+    }
+
+    /* Submit Button Style */
+    .submit-button {
+      padding: 10px;
+      font-size: 1em;
+      color: #fff;
+      background-color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .submit-button:hover {
+      background-color: #555;
+    }
+
+    /* Responsive adjustment for smaller screens */
+    @media (max-width: 900px) {
+      .card {
+        width: calc(50% - 20px); /* Two cards per row on smaller screens */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        width: 100%; /* Full width on very small screens */
+      }
+
+      .dropdown {
+        width: 100%; /* Full width for dropdowns on small screens */
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Row 1: Cards 1, 2, 3 -->
+  <div class="card">
+    <img src="https://housing-images.n7net.in/01c16c28/7088d072f7cbcfa6617f52c178cf2403/v0/fs/3_rk_-for-rent-manish_nagar_somalwada-Nagpur-hall.jpg" alt="Image 1">
+    <button class="more-images-button">More Images</button>
+    <h2>Manisha's PG</h2>
+    <p>Manish Nagar Nagpur.</p>
+    <div class="form-container">
+      <select class="dropdown">
+        <option value="">In-Room Service</option>
+        <option value="1">AC-₹2000</option>
+        <option value="2">Non-AC-₹1500</option>
+      </select>
+      <select class="dropdown">
+        <option value="">Meal Preference</option>
+        <option value="1">Veg-₹1000</option>
+        <option value="2">Non-Veg-₹1200</option>
+      </select>
+      <select class="dropdown">
+        <option value="">Room Type</option>
+        <option value="1">Single-₹3000</option>
+        <option value="2">Double-₹5500</option>
+      </select>
+      <button class="submit-button">Submit</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/300x200" alt="Image 2">
+    <button class="more-images-button">More Images</button>
+    <h2>Card Heading 2</h2>
+    <p>This is some information about Card 2.</p>
+    <div class="form-container">
+      <select class="dropdown">
+        <option value="">In-Room Service</option>
+        <option value="1">AC</option>
+        <option value="2">Non-AC</option>
+      </select>
+      <select class="dropdown">
+        <option value="">Meal preference</option>
+        <option value="1">Veg</option>
+        <option value="2">Non-Veg</option>
+      </select>
+      <select class="dropdown">
+        <option value="">Room Type</option>
+        <option value="1">Single</option>
+        <option value="2">Double</option>
+      </select>
+      <select class="dropdown">
+        <option value="">Select Option 4</option>
+        <option value="1">Option 4.1</option>
+        <option value="2">Option 4.2</option>
+      </select>
+      <button class="submit-button">Submit</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/300x200" alt="Image 3">
+    <button class="more-images-button">More Images</button>
+    <h2>Card Heading 3</h2>
+    <p>This is some information about Card 3.</p>
+    <div class="form-container">
+      <select class="dropdown">
+        <option value="">In-Room Service</option>
+        <option value="1">AC</option>
+        <option value="2">Non-AC</option>
+      </select>
+      <select class="dropdown">
+        <option value="">Meal preference</option>
+        <option value="1">Veg</option>
+        <option value="2">Non-Veg</option>
+      </select>
+      <select class="dropdown">
+        <option value="">Room Type</option>
+        <option value="1">Single</option>
+        <option value="2">Double</option>
+      </select>
+      <select class="dropdown">
+        <option value="">Select Option 4</option>
+        <option value="1">Option 4.1</option>
+        <option value="2">Option 4.2</option>
+      </select>
+      <button class="submit-button">Submit</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- Row 2: Cards 4, 5, 6 -->
+<div class="container">
+    <!-- Row 1: Cards 1, 2, 3 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200" alt="Image 1">
+      <button class="more-images-button">More Images</button>
+      <h2>Card Heading 1</h2>
+      <p>This is some information about Card 1.</p>
+      <div class="form-container">
+        <select class="dropdown">
+          <option value="">In-Room Service</option>
+        <option value="1">AC</option>
+        <option value="2">Non-AC</option>
+        </select>
+        <select class="dropdown">
+          <option value="">Meal preference</option>
+        <option value="1">Veg</option>
+        <option value="2">Non-Veg</option>
+        </select>
+        <select class="dropdown">
+          <option value="">Room Type</option>
+        <option value="1">Single</option>
+        <option value="2">Double</option>
+        </select>
+        <select class="dropdown">
+          <option value="">Select Option 4</option>
+          <option value="1">Option 4.1</option>
+          <option value="2">Option 4.2</option>
+        </select>
+        <button class="submit-button">Submit</button>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200" alt="Image 2">
+      <button class="more-images-button">More Images</button>
+      <h2>Card Heading 2</h2>
+      <p>This is some information about Card 2.</p>
+      <div class="form-container">
+        <select class="dropdown">
+          <option value="">In-Room Service</option>
+        <option value="1">AC</option>
+        <option value="2">Non-AC</option>
+        </select>
+        <select class="dropdown">
+          <option value="">Meal preference</option>
+        <option value="1">Veg</option>
+        <option value="2">Non-Veg</option>
+        </select>
+        <select class="dropdown">
+          <option value="">Room Type</option>
+        <option value="1">Single</option>
+        <option value="2">Double</option>
+        </select>
+        <select class="dropdown">
+          <option value="">Select Option 4</option>
+          <option value="1">Option 4.1</option>
+          <option value="2">Option 4.2</option>
+        </select>
+        <button class="submit-button">Submit</button>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200" alt="Image 3">
+      <button class="more-images-button">More Images</button>
+      <h2>Card Heading 3</h2>
+      <p>This is some information about Card 3.</p>
+      <div class="form-container">
+        <select class="dropdown">
+          <option value="">In-Room Service</option>
+        <option value="1">AC</option>
+        <option value="2">Non-AC</option>
+        </select>
+        <select class="dropdown">
+          <option value="">Meal preference</option>
+        <option value="1">Veg</option>
+        <option value="2">Non-Veg</option>
+        </select>
+        <select class="dropdown">
+          <option value="">Room Type</option>
+        <option value="1">Single</option>
+        <option value="2">Double</option>
+        </select>
+        <select class="dropdown">
+          <option value="">Select Option 4</option>
+          <option value="1">Option 4.1</option>
+          <option value="2">Option 4.2</option>
+        </select>
+        <button class="submit-button">Submit</button>
+      </div>
+    </div>
+    
+      
+      
+</body>
+</html>

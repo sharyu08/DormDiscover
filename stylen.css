@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: -400px;
+}
+
+/* Left Image Section */
+.image-container {
+    width: 40%;
+    background-image: url('path/to/room-photo.jpg'); /* Replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* Right Info Section */
+.info-container {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-header h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.info-header p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.location img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+/* Dropdowns */
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.options select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 48%; /* Makes each dropdown take half of the row */
+}
+
+/* Pricing and Submit Button */
+.pricing-submit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0e5579;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #0e5579;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #09405e;
+}

@@ -1,0 +1,140 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background: radial-gradient( circle at bottom  , #00ffaf, #7f7fd5, #2e3192);/* Initial Gradient */
+    background-size: 250% 250%; /* Double the background size for smooth animation */
+    animation: randomMotion 7s linear infinite; /* Animation effect */
+    color: #333;
+}
+
+@keyframes randomMotion {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 75% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color:transparent;
+    height: 70px;
+}
+
+.logo-container {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+}
+
+.services-header {
+    font-size: 40px;
+    color: #51005d;
+}
+
+.services-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.services-image {
+    width: 60%;
+    max-width: 370px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1000px;
+}
+
+.service-column {
+    flex: 1 1 200px;
+    max-width: 250px;
+    text-align: center;
+    
+    background-color:transparent;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on service column */
+.service-column:hover {
+    transform: translateY(-10px); /* Slightly lift the column */
+    
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover effect on service icon */
+.service-icon:hover {
+    transform: scale(1.2); /* Scale the icon slightly */
+    filter: brightness(1.2); /* Slightly increase brightness */
+}
+
+.service-title {
+    font-size: 20px;
+    color: #fff;
+}
+
+.service-description {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+}
+.next-button {
+    position: fixed;      /* Fixes the button to the viewport */
+    top: 50%;             /* Vertically centers the button */
+    right: 20px;          /* Positions the button on the right side */
+    transform: translateY(-50%);  /* Centers the button vertically */
+    padding: 10px 20px;
+    background-color: #3ab5b0; /* Customize color as needed */
+    
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.next-button:hover {
+    background-color: #3d99be; /* Changes color on hover */
+}

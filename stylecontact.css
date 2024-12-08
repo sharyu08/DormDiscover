@@ -1,0 +1,119 @@
+/*Contact Us Page*/
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background: radial-gradient( circle at bottom  , #00ffaf, #7f7fd5, #2e3192);/* Initial Gradient */
+    background-size: 250% 250%; /* Double the background size for smooth animation */
+    animation: randomMotion 7s linear infinite; /* Animation effect */
+}
+
+@keyframes randomMotion {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 75% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-page {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.contact-page h1, .contact-page h2 {
+    color: #0e5579;
+    text-align: center;
+}
+
+.contact-info h2 {
+    margin-bottom: 20px; /* Adjust as needed for desired spacing */
+    font-size: 24px; /* Optional: increase font size for emphasis */
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.contact-form-section {
+    margin-top: 30px;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.contact-form button {
+    display: block;            /* Ensures button takes its own line */
+    margin: 20px auto;         /* Centers the button horizontally */
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0e5579;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.contact-form button:hover {
+    background-color: #03191c;
+}
+.next-button {
+    position: fixed;      /* Fixes the button to the viewport */
+    top: 50%;             /* Vertically centers the button */
+    right: 20px;          /* Positions the button on the right side */
+    transform: translateY(-50%);  /* Centers the button vertically */
+    padding: 10px 20px;
+    background-color: #3ab5b0; /* Customize color as needed */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.next-button:hover {
+    background-color: #3d99be; /* Changes color on hover */
+}
